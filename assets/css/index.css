@@ -168,7 +168,7 @@ html{
   
 /* styling the content page  */
   .content-box {
-    background-image: url(/assets/bg10.jpg);
+    
     box-sizing: content-box;
     width: auto;
     height: fit-content;
