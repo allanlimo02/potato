@@ -165,7 +165,13 @@ html{
 
   } */
 
-  
+  /* Trial styling */
+ .trial{
+   margin-top: 50px;
+   background-image: url(/assets/bg10.jpg);
+   background-size: cover;
+
+ } 
 /* styling the content page  */
   .content-box {
     
