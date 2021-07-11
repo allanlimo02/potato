@@ -1,0 +1,379 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+/*===== VARIABLES CSS =====*/
+:root{
+  --header-height: 4rem;
+  --font-semi: 600;
+}
+
+@media screen and (min-width: 768px){
+  :root{
+    --big-font-size: 3.5rem;
+    --h2-font-size: 2rem;
+    --normal-font-size: 1rem;
+  }
+}
+
+/*===== Margenes =====*/
+:root{
+  --mb-1: 0.5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+}
+
+/*===== z index =====*/
+:root{
+  --z-back: -10;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*===== BASE =====*/
+*,::before,::after{
+  box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    width: 100%;
+  }
+  body{
+    margin: var(--header-height) 0 0 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    color: var(--second-color);
+  }
+
+/*===== LAYOUT =====*/
+.bd-grid{
+    /* background-color: chartreuse; */
+    max-width: 1024px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-column-gap: 2rem;
+    width: calc(100% - 2rem);
+    margin-left: var(--mb-2);
+    margin-right: var(--mb-2);
+  }
+  .l-header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: aqua;
+    box-shadow: 0 1px 4px rgba(146,161,176,.15);
+  }
+  
+  /*===== NAV =====*/
+  .nav{
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: var(--font-semi);
+  }
+
+  ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;   
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  @media screen and (max-width: 768px){
+    .nav__menu{
+      font-weight: 700;
+      position: fixed;
+      top: var(--header-height);
+      right: -100%;
+      width: 100%;
+      height: 100%;
+      /* padding: 2rem; */
+      background-color: var(--second-color);
+      transition: .5s;
+    }
+  }
+  .nav__item{
+    margin-bottom: var(--mb-4);
+    padding-left: 6rem;
+  }
+  .nav__link{
+    position: relative;
+    color: #fff;
+  }
+  .nav__link:hover{
+    position: relative;
+  }
+  .nav__link:hover::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0.18rem;
+    left: 0;
+    top: 2rem;
+    background-color: var(--first-color);
+  }
+  .nav__logo{
+    color: var(--second-color);
+  }
+  .nav__toggle{
+    color: var(--second-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .nav{
+    height: calc(var(--header-height) + 1rem);
+  }
+  .nav__list{
+    display: flex;
+    padding-top: 0;
+
+  }
+  .nav__item{
+    margin-left: var(--mb-6);
+    margin-bottom: 0;
+  }
+  .nav__toggle{
+    display: none;
+  }
+  .nav__link{
+    color: var(--second-color);
+  }
+  .show{
+    right: 0;
+  }
+  .d-flex{
+      display: flex !important;
+      padding-left: 20rem;
+  }
+
+  /* .home{
+    background-image: url("/bg1.jpg");
+    width: auto;
+    height: 65rem;
+    background-size: cover;
+    margin-top: -15rem;
+
+  } */
+
+  
+/* styling the content page  */
+  .content-box {
+    background-image: url(/assets/bg10.jpg);
+    box-sizing: content-box;
+    width: auto;
+    height: fit-content;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .content h3{
+    padding-top: 4rem;
+    padding-left: 30%;
+    color: #269999;
+    font-size: 40px;
+    font-weight: 700;
+    /* padding-right: 0; */
+  }
+
+  .about-img{
+    display: flex;
+    padding-top: 6rem;
+  }
+  .about{
+    display: block;
+    padding-left: 20%;
+  }
+
+  .port{
+    display: block;
+    text-align: center;
+  }
+
+  .text{
+    display: block;
+    margin: auto;
+  }
+
+  button{
+    float: right;
+    margin-right: 10%;
+
+  }
+
+  .col-3{
+    box-shadow: 3px 3px 3px 3px olive;
+    border-radius: 5%;
+  }
+
+  .lang{
+    display: block;
+    text-align: center;
+  }
+
+
+  .one{
+    border: aqua;
+    border-radius:  solid 2px;
+
+  }
+
+  /* styling the education section */
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+   }
+
+
+.list ul {
+  list-style-type: none;
+  padding-left: 20px;
+  color: #666;
+}
+
+.list li {
+  font-size: 20px;
+  color: black;
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px
+}
+
+.list li:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: FontAwesome;
+  content: "\f058";
+  color: green;
+}
+
+hr {
+  width: 60%;
+  border: 3px solid aqua;
+  border-radius: 5px;
+  margin: auto;
+}
+/* this is the codes for styling contact form */
+  .contactform{
+    background-image: url(/assets/bg8.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 2rem;
+  }
+
+  .mb-3{
+    font-size: 20px;
+    color: white;
+  }
+
+/* styling the skill */
+.skill-icon{
+  margin-top: 20px;
+  height: 700px;
+  display: flex;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.skill-services{
+  margin-top: 20px;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+ 
+}
+.skill-box{
+  height: 720px;
+  width: 90%;
+  line-height: 3;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 8px 30px 0px rgba(153, 153, 153, 0.1);
+  font-size: 14px;
+
+}
+
+.skill-services h4{
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 2;
+  margin-left: 10px;
+  }
+
+
+  /* <!---writing styles for the footer */
+  .footer-basic {
+    padding: 40px 0;
+    background-color: cyan;
+    color: #4b4c4d;
+  }
+  
+  .footer-basic ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+  
+  .footer-basic li {
+    padding: 0 10px;
+  }
+  
+  .footer-basic ul a {
+    color: inherit;
+    text-decoration: none;
+    /* opacity: 0.8; */
+  }
+  
+  .footer-basic ul a:hover {
+    background-color: red;
+    color: white;
+  }
+  
+  .footer-basic .social {
+    text-align: center;
+    padding-bottom: 25px;
+  }
+  
+  .footer-basic .social>a {
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    margin: 0 8px;
+    color: inherit;
+    opacity: 0.75;
+  }
+  
+  .footer-basic .social>a:hover {
+    /* opacity: 0.9; */
+    color: black;
+  }
+  
+  .footer-basic .copyright {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+  }
+  
+  
+
